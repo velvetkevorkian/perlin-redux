@@ -21,17 +21,5 @@ module.exports = {
     splitChunks: {
       chunks: 'all'
     }
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          //TODO: use mini-css-extract-plugin in production
-          'style-loader',
-          'css-loader'
-        ]
-      }
-    ]
   }
 }
