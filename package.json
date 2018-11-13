@@ -19,7 +19,8 @@
   },
   "scripts": {
     "build": "webpack --config webpack.production.js",
-    "serve": "webpack-dev-server --config webpack.dev.js"
+    "serve": "webpack-dev-server --config webpack.dev.js",
+    "deploy": "npm run build && rsync -avz --delete perlin-redux deploy@kylemacquarrie.co.uk:/var/www/macquarrie.systems/shared/public/labs/"
   },
   "license": "ISC"
 }
