@@ -2,7 +2,7 @@
   "name": "perlin-redux",
   "version": "0.0.1",
   "dependencies": {
-    "@velvetkevorkian/sketch-ui": "0.0.2",
+    "@velvetkevorkian/sketch-ui": "^0.0.3",
     "p5": "^0.7.2"
   },
   "devDependencies": {
@@ -20,7 +20,8 @@
   "scripts": {
     "build": "webpack --config webpack.production.js",
     "serve": "webpack-dev-server --config webpack.dev.js",
-    "deploy": "npm run build && rsync -avz --delete perlin-redux deploy@kylemacquarrie.co.uk:/var/www/macquarrie.systems/shared/public/labs/"
+    "ship": "rsync -avz --delete perlin-redux $npm_config_labs_deploy_path",
+    "deploy": "npm run build && npm run ship"
   },
   "license": "ISC"
 }
