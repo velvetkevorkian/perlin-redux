@@ -15,7 +15,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'perlin-redux')
+    path: path.resolve(__dirname, 'docs')
   },
   optimization: {
     splitChunks: {
